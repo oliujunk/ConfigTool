@@ -571,7 +571,7 @@
        <property name="title">
         <string>全局参数</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -586,7 +586,7 @@
            <property name="title">
             <string>串口参数</string>
            </property>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>40</x>
@@ -781,7 +781,7 @@
            <property name="title">
             <string>高级选项</string>
            </property>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>60</x>
@@ -871,7 +871,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -886,7 +886,7 @@
        <property name="title">
         <string>命令及提示</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>70</x>
@@ -897,28 +897,28 @@
         </property>
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="pushButtonGetPara">
            <property name="text">
             <string>获取当前参数</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="pushButtonSetPara">
            <property name="text">
             <string>设置并保存所有参数</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="pushButtonEnterATMode">
            <property name="text">
             <string>进入配置状态</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="pushButtonExitATMode">
            <property name="text">
             <string>进入通信状态</string>
            </property>
@@ -929,12 +929,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEdit"/>
+      <widget class="QTextEdit" name="textEditRecv"/>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QCheckBox" name="checkBox_2">
+        <widget class="QCheckBox" name="checkBoxRecvHex">
          <property name="text">
           <string>Hex显示</string>
          </property>
@@ -954,7 +954,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="pushButtonRecvClear">
          <property name="text">
           <string>清除窗口</string>
          </property>
@@ -963,12 +963,12 @@
       </layout>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEdit_2"/>
+      <widget class="QTextEdit" name="textEditSend"/>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QCheckBox" name="checkBox_4">
+        <widget class="QCheckBox" name="checkBoxSendHex">
          <property name="text">
           <string>Hex发送</string>
          </property>
@@ -988,14 +988,14 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="pushButtonSendClear">
          <property name="text">
           <string>清除窗口</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="pushButtonSend">
          <property name="text">
           <string>发送</string>
          </property>
