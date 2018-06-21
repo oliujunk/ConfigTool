@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>977</width>
-    <height>621</height>
+    <width>1100</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1100</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>NB-DTU配置工具</string>
@@ -19,7 +31,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>811</width>
+      <width>861</width>
       <height>31</height>
      </rect>
     </property>
@@ -32,54 +44,150 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelPortNum">
+      <widget class="QLabel" name="labelPCPortNum">
        <property name="text">
         <string>串口号</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBoxPortNum">
+      <widget class="QComboBox" name="comboBoxPCPortNum">
        <property name="editable">
         <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelBaudRate">
+      <widget class="QLabel" name="labelPCBaudRate">
        <property name="text">
         <string>波特率</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBoxBaudRate"/>
+      <widget class="QComboBox" name="comboBoxPCBaudRate">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>4800</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9600</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>19200</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>38400</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>57600</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>115200</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelParityDataStop">
+      <widget class="QLabel" name="labelPCParityDataStop">
        <property name="text">
         <string>校验/数据/停止</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBoxParity"/>
+      <widget class="QComboBox" name="comboBoxPCParity">
+       <item>
+        <property name="text">
+         <string>NONE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ODD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>EVEN</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBoxData"/>
+      <widget class="QComboBox" name="comboBoxPCData">
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBoxStop"/>
+      <widget class="QComboBox" name="comboBoxPCStop">
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelFlowControl">
+      <widget class="QLabel" name="labelPCFlowControl">
        <property name="text">
         <string>流控</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBoxFlowControl"/>
+      <widget class="QComboBox" name="comboBoxPCFlowControl">
+       <item>
+        <property name="text">
+         <string>NONE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CRTS</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer">
@@ -103,41 +211,16 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>50</y>
-      <width>258</width>
-      <height>410</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,4,2">
-     <item>
-      <widget class="QGroupBox" name="groupBoxCommand">
-       <property name="title">
-        <string>命令及提示</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="textEdit_2"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>60</y>
-      <width>431</width>
-      <height>451</height>
+      <width>451</width>
+      <height>601</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,4,2">
+    <layout class="QVBoxLayout" name="verticalLayoutLeft" stretch="1,5,3">
      <item>
       <widget class="QGroupBox" name="groupBoxWorkMode">
        <property name="title">
@@ -146,9 +229,9 @@
        <widget class="QWidget" name="horizontalLayoutWidget_2">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>10</y>
-          <width>160</width>
+          <x>50</x>
+          <y>30</y>
+          <width>321</width>
           <height>21</height>
          </rect>
         </property>
@@ -176,115 +259,300 @@
        <property name="title">
         <string>模式相关参数</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>401</width>
-          <height>134</height>
+          <width>421</width>
+          <height>301</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <layout class="QGridLayout" name="gridLayoutLinkA">
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="checkBox_3">
+          <layout class="QHBoxLayout" name="horizontalLayoutLinkA" stretch="1,4">
+           <item>
+            <widget class="QCheckBox" name="checkBoxLinkA">
              <property name="text">
               <string>连接服务器A</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="label_5">
-             <property name="text">
-              <string>地址和端口</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2" colspan="2">
-            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,1">
-             <item>
-              <widget class="QLineEdit" name="lineEdit_5"/>
+           <item>
+            <layout class="QGridLayout" name="gridLayoutLinkA">
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelLinkAIPPort">
+               <property name="text">
+                <string>地址和端口</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
              </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_6"/>
+             <item row="1" column="2">
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="comboBoxLinkAType">
+               <item>
+                <property name="text">
+                 <string>TCP</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>UDP</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="2">
+              <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="3,1">
+               <item>
+                <widget class="QLineEdit" name="lineEditLinkAIP"/>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEditLinkAPort"/>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelLinkAType">
+               <property name="text">
+                <string>连接类型</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
              </item>
             </layout>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>连接类型</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <spacer name="horizontalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="1" column="2">
-            <widget class="QComboBox" name="comboBox_3"/>
            </item>
           </layout>
          </item>
          <item>
-          <layout class="QGridLayout" name="gridLayoutLinkB">
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="checkBox">
+          <layout class="QHBoxLayout" name="horizontalLayoutLinkB" stretch="1,4">
+           <item>
+            <widget class="QCheckBox" name="checkBoxLinkB">
              <property name="text">
               <string>连接服务器B</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>地址和端口</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2" colspan="2">
-            <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,1">
-             <item>
-              <widget class="QLineEdit" name="lineEdit"/>
+           <item>
+            <layout class="QGridLayout" name="gridLayoutLinkB">
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelLinkBIPPort">
+               <property name="text">
+                <string>地址和端口</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
              </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_2"/>
+             <item row="1" column="2">
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="comboBoxLinkBType">
+               <item>
+                <property name="text">
+                 <string>TCP</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>UDP</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="2">
+              <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="3,1">
+               <item>
+                <widget class="QLineEdit" name="lineEditLinkBIP"/>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEditLinkBPort"/>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelLinkBType">
+               <property name="text">
+                <string>连接类型</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="label_2">
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutHeartBeat" stretch="1,4">
+           <item>
+            <widget class="QCheckBox" name="checkBoxHeartBeat">
              <property name="text">
-              <string>连接类型</string>
+              <string>启用心跳包</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="2">
-            <widget class="QComboBox" name="comboBox"/>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_4" columnstretch="1,4,0,0">
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelHeartBeatData">
+               <property name="text">
+                <string>心跳数据</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="labelHeartBeatType">
+               <property name="text">
+                <string>发送方式</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1" colspan="2">
+              <widget class="QComboBox" name="comboBoxHeartBeatType">
+               <item>
+                <property name="text">
+                 <string>向服务器发送心跳包</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>向串口终端发送心跳包</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="2">
+              <widget class="QLineEdit" name="lineEditHeartBeatData"/>
+             </item>
+             <item row="1" column="3">
+              <widget class="QCheckBox" name="checkBoxHeartBeatHex">
+               <property name="text">
+                <string>Hex</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>秒</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSpinBox" name="spinBox"/>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelHeartBeatTime">
+               <property name="text">
+                <string>心跳时间</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
-           <item row="1" column="3">
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutRegister" stretch="1,4">
+           <item>
+            <widget class="QCheckBox" name="checkBoxRegister">
+             <property name="text">
+              <string>启用注册包</string>
              </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
+            </widget>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_5" columnstretch="1,4,0,0">
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelRegisterData">
+               <property name="text">
+                <string>注册数据</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="2">
+              <widget class="QLineEdit" name="lineEditRegisterData"/>
+             </item>
+             <item row="1" column="1" colspan="2">
+              <widget class="QComboBox" name="comboBoxRegisterType">
+               <item>
+                <property name="text">
+                 <string>与服务器建立连接时发送一次</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>向服务器发送的每个数据包前都加上</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>同时支持以上两种</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QCheckBox" name="checkBoxRegisterHex">
+               <property name="text">
+                <string>Hex</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelRegisterType">
+               <property name="text">
+                <string>发送方式</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </item>
@@ -297,7 +565,437 @@
        <property name="title">
         <string>全局参数</string>
        </property>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>421</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QGroupBox" name="groupBoxSerialPort">
+           <property name="title">
+            <string>串口参数</string>
+           </property>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>10</y>
+              <width>347</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelBaudRate">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>波特率</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBoxBaudRate">
+               <property name="currentIndex">
+                <number>1</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>4800</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>9600</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>19200</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>38400</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>57600</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>115200</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="labelFlowControl">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>流控</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QComboBox" name="comboBoxFlowControl">
+               <item>
+                <property name="text">
+                 <string>NONE</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>CRTS</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelParity">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>检验位</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="comboBoxParity">
+               <item>
+                <property name="text">
+                 <string>NONE</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>ODD</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>EVEN</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="labelData">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>数据位</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QComboBox" name="comboBoxData">
+               <property name="currentIndex">
+                <number>3</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>5</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>6</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>7</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>8</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLabel" name="labelStop">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>停止位</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="5">
+              <widget class="QComboBox" name="comboBoxStop">
+               <item>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBoxAdvancedOption">
+           <property name="title">
+            <string>高级选项</string>
+           </property>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>20</y>
+              <width>284</width>
+              <height>48</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelStartMsg">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>启动信息</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="2">
+              <widget class="QLineEdit" name="lineEditStartMsg"/>
+             </item>
+             <item row="0" column="3">
+              <widget class="QCheckBox" name="checkBoxEcho">
+               <property name="text">
+                <string>指令回显</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelAPN">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>运营商及APN</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="comboBoxAPN">
+               <item>
+                <property name="text">
+                 <string>移动</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>联通</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>电信</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>其他</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="2" colspan="2">
+              <widget class="QLineEdit" name="lineEditAPN">
+               <property name="mouseTracking">
+                <bool>true</bool>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>60</y>
+      <width>581</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayoutRight" stretch="2,6,1,3,1">
+     <item>
+      <widget class="QGroupBox" name="groupBoxCommand">
+       <property name="title">
+        <string>命令及提示</string>
+       </property>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>381</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>获取当前参数</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="text">
+            <string>设置并保存所有参数</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string>进入配置状态</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="text">
+            <string>进入通信状态</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="text">
+          <string>Hex显示</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>清除窗口</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit_2"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QCheckBox" name="checkBox_4">
+         <property name="text">
+          <string>Hex发送</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>清除窗口</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="text">
+          <string>发送</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -307,7 +1005,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>977</width>
+     <width>1100</width>
      <height>23</height>
     </rect>
    </property>
