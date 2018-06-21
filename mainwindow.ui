@@ -237,16 +237,22 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QRadioButton" name="radioButtonCoAP">
+          <widget class="QRadioButton" name="radioButtonTransparent">
            <property name="text">
-            <string>CoAP模式</string>
+            <string>透传模式</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButtonTransparent">
+          <widget class="QRadioButton" name="radioButtonCoAP">
            <property name="text">
-            <string>透传模式</string>
+            <string>CoAP模式</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
