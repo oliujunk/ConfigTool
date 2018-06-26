@@ -31,7 +31,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>861</width>
+      <width>771</width>
       <height>31</height>
      </rect>
     </property>
@@ -184,7 +184,12 @@
        </item>
        <item>
         <property name="text">
-         <string>CRTS</string>
+         <string>HARD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SOFT</string>
         </property>
        </item>
       </widget>
@@ -203,7 +208,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButtonOpenPort">
+      <widget class="QPushButton" name="pushButtonOpenPort">
        <property name="text">
         <string>打开串口</string>
        </property>
@@ -351,6 +356,9 @@
           <layout class="QHBoxLayout" name="horizontalLayoutLinkB" stretch="1,4">
            <item>
             <widget class="QCheckBox" name="checkBoxLinkB">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>连接服务器B</string>
              </property>
@@ -423,6 +431,9 @@
           <layout class="QHBoxLayout" name="horizontalLayoutHeartBeat" stretch="1,4">
            <item>
             <widget class="QCheckBox" name="checkBoxHeartBeat">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>启用心跳包</string>
              </property>
@@ -502,6 +513,9 @@
           <layout class="QHBoxLayout" name="horizontalLayoutRegister" stretch="1,4">
            <item>
             <widget class="QCheckBox" name="checkBoxRegister">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>启用注册包</string>
              </property>
@@ -898,6 +912,9 @@
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0">
           <widget class="QPushButton" name="pushButtonGetPara">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>获取当前参数</string>
            </property>
@@ -905,6 +922,9 @@
          </item>
          <item row="0" column="1">
           <widget class="QPushButton" name="pushButtonSetPara">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>设置并保存所有参数</string>
            </property>
@@ -912,6 +932,9 @@
          </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="pushButtonEnterATMode">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>进入配置状态</string>
            </property>
@@ -919,6 +942,9 @@
          </item>
          <item row="1" column="1">
           <widget class="QPushButton" name="pushButtonExitATMode">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>进入通信状态</string>
            </property>
@@ -935,6 +961,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QCheckBox" name="checkBoxRecvHex">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>Hex显示</string>
          </property>
@@ -955,6 +984,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonRecvClear">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>清除窗口</string>
          </property>
@@ -969,6 +1001,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QCheckBox" name="checkBoxSendHex">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>Hex发送</string>
          </property>
@@ -989,6 +1024,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonSendClear">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>清除窗口</string>
          </property>
@@ -996,6 +1034,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonSend">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>发送</string>
          </property>

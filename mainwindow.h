@@ -5,6 +5,8 @@
 
 #include <QtSerialPort/QSerialPortInfo>
 #include <QtSerialPort/QSerialPort>
+#include <QTimer>
+#include <QTime>
 
 
 namespace Ui {
@@ -18,11 +20,33 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    int ReceWindowHexState = Qt::Unchecked;
+    int SendWindowHexState = Qt::Unchecked;
+
+    void stringToHex(QString str, QByteArray &sendData);
+
+    char convertHexChar(char ch);
 
 private slots:
-    void on_radioButtonOpenPort_toggled(bool checked);
+    void readData();
 
-private:
+    void on_checkBoxRecvHex_stateChanged(int arg1);
+
+    void on_checkBoxSendHex_stateChanged(int arg1);
+
+    void on_pushButtonRecvClear_clicked();
+
+    void on_pushButtonSendClear_clicked();
+
+    void on_pushButtonSend_clicked();
+
+    void on_pushButtonGetPara_clicked();
+
+    void on_pushButtonEnterATMode_clicked();
+
+    void on_pushButtonOpenPort_clicked();
+
+public:
     Ui::MainWindow *ui;
     QSerialPort *PCSerialPort;
 };
