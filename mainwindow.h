@@ -46,9 +46,14 @@ private slots:
 
     void on_pushButtonOpenPort_clicked();
 
-public:
+    void sendOneCmd(QString str);
+
+
+    void on_pushButtonExitATMode_clicked();
+
+private:
     Ui::MainWindow *ui;
-    QSerialPort *PCSerialPort;
+    QSerialPort PCSerialPort;
 };
 
 #endif // MAINWINDOW_H
